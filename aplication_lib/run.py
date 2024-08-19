@@ -1,4 +1,4 @@
-from main.main import start
+from main_pkg.main import start
 
 if __name__ == "__main__":
     start()

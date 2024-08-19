@@ -1,5 +1,5 @@
-from configs.broker_configs import mqtt_broker_configs
-from main.mqtt_connection.client_connection import MqttClientConnection
+from configs_pkg.broker_configs import mqtt_broker_configs
+from main_pkg.mqtt_connection.client_connection import MqttClientConnection
 import time
 
 def start():

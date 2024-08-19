@@ -2,7 +2,7 @@ from .callbacks import on_connect, on_subscribe, on_menssage
 import paho.mqtt.client as mqtt
 
 class MqttClientConnection:
-    def __init__(self, broker_ip:  str, port: int, client_name: str, keepalive=60):
+    def __init__(self, broker_ip:  str, port: int, client_name: str, keepalive):
         self._broker_ip = broker_ip
         self._port = port 
         self._client_name = client_name

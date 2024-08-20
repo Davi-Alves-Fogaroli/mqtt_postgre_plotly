@@ -1,5 +1,5 @@
 import paho.mqtt.client as mqtt
-from boil_data_pkg.data_generaton import sensor_data_generator
+from aplication_lib.boil_data_pkg.data_generator import sensor_data_generator
 import time 
 
 #sensor_data[

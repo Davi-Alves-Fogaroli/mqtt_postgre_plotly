@@ -10,8 +10,12 @@ class MqttClientConnection:
         self._mqtt_client = None
 
     def start_connection(self):
-        mqtt_client = mqtt.Client(self._client_name)
-         
+        
+        try:
+            mqtt_client = mqtt.Client(self._client_name) #paho-mqtt==1.6.1 version
+        except:
+            mqtt_client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION1)  #paho-mqtt==2.0 version (powerShell just work with this comand version)
+        
         #callbacks
         mqtt_client.on_connect = on_connect
         mqtt_client.on_subscribe = on_subscribe

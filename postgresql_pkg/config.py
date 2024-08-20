@@ -9,7 +9,7 @@ def postgres_config(filename="database.ini", section="postgresql"):
  
     if parser.has_section(section):
         params = parser.items(section)
-    
+        # print("\nn params: ", params ,"\\n")
         for param in params:
             data_base[param[0]] = param[1]
 
